@@ -20,6 +20,7 @@ endif
 # Branding
 PEX_BUILD_TYPE ?= UNOFFICIAL
 PEX_VERSION := 3.0
+PEX_MAINTAINER ?= Unknown
 
 CUSTOM_DATE_YEAR := $(shell date -u +%Y)
 CUSTOM_DATE_MONTH := $(shell date -u +%m)
@@ -41,5 +42,7 @@ ADDITIONAL_BUILD_PROPERTIES += \
     org.pixelexperience.version=$(CUSTOM_VERSION_PROP) \
     org.pixelexperience.version.display=$(CUSTOM_VERSION) \
     org.pixelexperience.build_date=$(CUSTOM_BUILD_DATE) \
+    org.pex.build_maintainer=$(PEX_MAINTAINER) \
+    org.pex.version.prop=$(CUSTOM_PLATFORM_VERSION) \
     org.pixelexperience.build_date_utc=$(CUSTOM_BUILD_DATE_UTC) \
     org.pixelexperience.build_type=$(PEX_BUILD_TYPE)
